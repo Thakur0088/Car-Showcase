@@ -1,0 +1,110 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    height: 100vh; /* Full height for centering */
+}
+table {
+    border: 3px solid #000000;
+    border-radius: 10px;
+    padding: 22px;
+    background: white; /* Added background to form */
+    z-index: 2; /* Ensure the form is above images */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+}
+th {
+    text-align: left;
+    font-size: 24px; 
+}
+td {
+    padding: 10px;
+}
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+input[type="submit"], input[type="button"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none; /* Added border none */
+    border-radius: 5px; /* Rounded corners for button */
+    margin-left: 10px; /* Space between buttons */
+}
+
+/* Image Styling */
+.left-image, .right-image {
+    margin-top: 80px;
+    transform: translateY(-50%);
+    width: 30%; /* Adjusted width */
+    height: auto;
+    opacity: 0.8; /* Slight transparency */
+    z-index: 1; /* Ensure images are behind the form */
+}
+
+.left-image {
+    left: -15%; /* Position left image */
+}
+
+.right-image {
+    right: -15%; /* Position right image */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0; /* Align to left */
+    top: 0; /* Align to top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    justify-content: center; /* Center modal horizontally */
+    align-items: center; /* Center modal vertically */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* Center modal content */
+    padding: 20px;
+    border-radius: 8px; /* Added rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 40%; /* Adjusted width */
+    max-height: 80%; /* Maximum height to avoid overflow */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds max height */
+}
+
+/* Form fields styling */
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"],
+.modal-content textarea,
+.modal-content select {
+    width: 95%; /* Decreased column width for form fields */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between fields */
+    font-size: 16px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
